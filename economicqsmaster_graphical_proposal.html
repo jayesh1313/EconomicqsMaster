@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EconomicqsMaster Visual Proposal | CredibleEduTech</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Inter', 'sans-serif'] },
+                    colors: {
+                        brand: {
+                            dark: '#0f172a',    // Deep slate
+                            primary: '#2563eb', // Blue
+                            accent: '#f59e0b',  // Gold/Yellow
+                            success: '#10b981', // Green
+                            danger: '#ef4444'   // Red
+                        }
+                    },
+                    animation: {
+                        'flow': 'flow 2s linear infinite',
+                        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'float': 'float 3s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        flow: {
+                            '0%': { strokeDashoffset: '24' },
+                            '100%': { strokeDashoffset: '0' },
+                        },
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-10px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; background-color: #f8fafc; }
+        .gradient-bg { background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%); }
+        .glass-card { background: rgba(255, 255, 255, 0.9); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.2); }
+        
+        /* Animated SVG Flow Lines */
+        .animated-line {
+            stroke-dasharray: 12;
+            animation: flow 1s linear infinite;
+        }
+
+        /* Connecting lines for desktop */
+        .connect-line-horizontal {
+            position: absolute; top: 50%; width: 100%; height: 4px; background-color: #e2e8f0; z-index: 0; transform: translateY(-50%);
+        }
+    </style>
+</head>
+<body class="text-gray-800 antialiased">
+
+    <nav class="fixed w-full z-50 bg-white/95 backdrop-blur-md border-b border-gray-200 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <div class="flex items-center gap-3">
+                    <div class="w-12 h-12 bg-gradient-to-br from-brand-primary to-blue-700 rounded-xl flex items-center justify-center text-white font-bold text-2xl shadow-lg">
+                        CE
+                    </div>
+                    <div>
+                        <span class="block text-2xl font-extrabold text-gray-900 tracking-tight leading-none">CredibleEduTech</span>
+                        <span class="block text-xs text-brand-primary font-bold tracking-widest uppercase mt-1">Platform Blueprint</span>
+                    </div>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#how-it-works" class="text-gray-600 hover:text-brand-primary font-semibold transition">How It Works</a>
+                    <a href="#security" class="text-gray-600 hover:text-brand-primary font-semibold transition">Anti-Piracy Security</a>
+                    <a href="#monetization" class="text-gray-600 hover:text-brand-primary font-semibold transition">Revenue Flow</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="relative pt-32 pb-20 lg:pt-40 lg:pb-28 overflow-hidden gradient-bg text-white">
+        <!-- Background Pattern -->
+        <div class="absolute inset-0 opacity-10 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCI+CjxyZWN0IHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCIgZmlsbD0ibm9uZSI+PC9yZWN0Pgo8Y2lyY2xlIGN4PSIyIiBjeT0iMiIgcj0iMiIgZmlsbD0iI2ZmZiI+PC9jaXJjbGU+Cjwvc3ZnPg==')]"></div>
+        
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="inline-block mb-6 px-4 py-1.5 rounded-full bg-white/10 border border-white/20 text-brand-accent font-semibold text-sm tracking-widest uppercase animate-pulse-slow">
+                Interactive Visual Proposal
+            </div>
+            
+            <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight mb-6 leading-tight">
+                Digitizing <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-accent to-yellow-200">EconomicqsMaster</span>
+            </h1>
+            <p class="mt-4 max-w-3xl text-xl md:text-2xl text-blue-100 mx-auto leading-relaxed font-light">
+                We build your custom Web Portal, Android App, and iOS App. <br class="hidden md:block">
+                <strong>100% secure. 100% yours.</strong>
+            </p>
+
+            <!-- Floating Device Icons Visual -->
+            <div class="mt-16 flex justify-center items-end gap-6 md:gap-12 opacity-90">
+                <div class="flex flex-col items-center animate-float" style="animation-delay: 0s;">
+                    <div class="w-16 h-16 md:w-20 md:h-20 bg-white/10 rounded-2xl flex items-center justify-center backdrop-blur-md border border-white/20 shadow-2xl mb-3">
+                        <i class="fa-brands fa-apple text-4xl md:text-5xl"></i>
+                    </div>
+                    <span class="font-medium text-sm md:text-base">iOS App</span>
+                </div>
+                <div class="flex flex-col items-center animate-float" style="animation-delay: 0.5s;">
+                    <div class="w-20 h-20 md:w-24 md:h-24 bg-brand-primary rounded-2xl flex items-center justify-center shadow-[0_0_40px_rgba(37,99,235,0.5)] border border-blue-400 mb-3 transform -translate-y-4">
+                        <i class="fa-solid fa-laptop-code text-5xl md:text-6xl text-white"></i>
+                    </div>
+                    <span class="font-bold text-lg">Web Platform</span>
+                </div>
+                <div class="flex flex-col items-center animate-float" style="animation-delay: 1s;">
+                    <div class="w-16 h-16 md:w-20 md:h-20 bg-white/10 rounded-2xl flex items-center justify-center backdrop-blur-md border border-white/20 shadow-2xl mb-3">
+                        <i class="fa-brands fa-android text-4xl md:text-5xl text-green-400"></i>
+                    </div>
+                    <span class="font-medium text-sm md:text-base">Android App</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="how-it-works" class="py-24 bg-white relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 mb-4">How The Platform Works</h2>
+                <p class="text-lg text-gray-500 max-w-2xl mx-auto">A simple, automated pipeline from your laptop directly to your students' screens.</p>
+            </div>
+
+            <!-- The Visual Pipeline Workflow -->
+            <div class="relative flex flex-col md:flex-row items-center justify-between max-w-6xl mx-auto gap-8 md:gap-0 mt-12">
+                
+                <!-- Background Connection Line (Desktop Only) -->
+                <div class="hidden md:block absolute top-1/2 left-[10%] right-[10%] h-2 bg-gray-100 rounded-full z-0 transform -translate-y-1/2">
+                    <!-- Animated data flow dot -->
+                    <div class="absolute top-0 left-0 h-full w-24 bg-gradient-to-r from-transparent via-brand-primary to-transparent rounded-full opacity-50 animate-[flow_3s_linear_infinite] ml-[-24px]"></div>
+                </div>
+
+                <!-- Step 1: Admin -->
+                <div class="relative z-10 flex flex-col items-center w-full md:w-1/3 text-center px-4">
+                    <div class="w-24 h-24 bg-blue-50 border-4 border-white shadow-xl rounded-full flex items-center justify-center mb-6 relative">
+                        <div class="absolute -top-3 -right-3 w-8 h-8 bg-brand-primary text-white rounded-full flex items-center justify-center font-bold border-2 border-white">1</div>
+                        <i class="fa-solid fa-user-tie text-4xl text-brand-primary"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">You (The Educator)</h3>
+                    <p class="text-gray-500 text-sm bg-gray-50 p-4 rounded-xl border border-gray-100">
+                        You log into your private <b>Admin Dashboard</b> and upload a new Economics video lecture and set the price.
+                    </p>
+                    <!-- Mobile Down Arrow -->
+                    <i class="fa-solid fa-arrow-down text-2xl text-gray-300 mt-6 md:hidden"></i>
+                </div>
+
+                <!-- Step 2: The Secure Cloud -->
+                <div class="relative z-10 flex flex-col items-center w-full md:w-1/3 text-center px-4">
+                    <div class="w-28 h-28 bg-brand-dark border-4 border-white shadow-2xl shadow-blue-900/20 rounded-2xl flex items-center justify-center mb-6 relative transform scale-110">
+                        <div class="absolute -top-3 -right-3 w-8 h-8 bg-brand-accent text-brand-dark rounded-full flex items-center justify-center font-bold border-2 border-white">2</div>
+                        <i class="fa-solid fa-cloud-arrow-up text-5xl text-white"></i>
+                        <!-- Mini lock icon -->
+                        <div class="absolute -bottom-4 right-8 w-10 h-10 bg-green-500 rounded-full flex items-center justify-center border-4 border-white text-white">
+                            <i class="fa-solid fa-lock text-sm"></i>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-bold text-brand-dark mb-2">CredibleEduTech Cloud</h3>
+                    <p class="text-gray-500 text-sm bg-gray-50 p-4 rounded-xl border border-gray-100 shadow-sm">
+                        Our system instantly <b>encrypts</b> the video, breaks it into secure chunks (HLS), and stores it safely so it cannot be downloaded.
+                    </p>
+                    <!-- Mobile Down Arrow -->
+                    <i class="fa-solid fa-arrow-down text-2xl text-gray-300 mt-6 md:hidden"></i>
+                </div>
+
+                <!-- Step 3: Students -->
+                <div class="relative z-10 flex flex-col items-center w-full md:w-1/3 text-center px-4">
+                    <div class="w-24 h-24 bg-blue-50 border-4 border-white shadow-xl rounded-full flex items-center justify-center mb-6 relative">
+                        <div class="absolute -top-3 -right-3 w-8 h-8 bg-brand-primary text-white rounded-full flex items-center justify-center font-bold border-2 border-white">3</div>
+                        <div class="flex gap-2">
+                            <i class="fa-solid fa-mobile-screen text-3xl text-gray-800"></i>
+                            <i class="fa-solid fa-laptop text-3xl text-gray-800"></i>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">The Students</h3>
+                    <p class="text-gray-500 text-sm bg-gray-50 p-4 rounded-xl border border-gray-100">
+                        Students pay and instantly watch the video on the <b>Web, Android, or iOS app</b> in high quality.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="security" class="py-24 bg-slate-900 text-white overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="text-red-400 font-bold tracking-widest uppercase text-sm mb-2 block"><i class="fa-solid fa-shield-halved mr-2"></i> Priority Request Solved</span>
+                <h2 class="text-3xl md:text-5xl font-extrabold mb-4">Bulletproof Anti-Piracy Setup</h2>
+                <p class="text-gray-400 max-w-2xl mx-auto text-lg">We don't just host videos; we lock them in a digital vault. Here is how we ensure your content stays yours.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 mt-16">
+                
+                <!-- Visual 1: Blocking Downloads -->
+                <div class="bg-slate-800/50 border border-slate-700 rounded-3xl p-8 relative">
+                    <h3 class="text-2xl font-bold mb-6 flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-red-500/20 text-red-400 flex items-center justify-center"><i class="fa-solid fa-ban"></i></div>
+                        Downloads are Blocked
+                    </h3>
+                    
+                    <!-- Diagram -->
+                    <div class="flex items-center justify-between bg-slate-900 p-6 rounded-2xl border border-slate-800">
+                        <!-- Video File -->
+                        <div class="text-center">
+                            <i class="fa-solid fa-file-video text-5xl text-brand-primary mb-2"></i>
+                            <p class="text-xs text-gray-400">Your Video</p>
+                        </div>
+                        
+                        <!-- Flow & Block -->
+                        <div class="flex-1 flex flex-col items-center relative px-4">
+                            <!-- Attempted Download Line -->
+                            <div class="w-full h-1 bg-gray-600 relative">
+                                <div class="absolute right-0 top-1/2 transform -translate-y-1/2 translate-x-1/2 w-8 h-8 bg-red-500 rounded-full flex items-center justify-center z-10 shadow-[0_0_15px_rgba(239,68,68,0.5)]">
+                                    <i class="fa-solid fa-xmark text-white font-bold"></i>
+                                </div>
+                            </div>
+                            <span class="text-[10px] text-gray-400 mt-3 font-mono uppercase">Standard MP4 Request Denied</span>
+                        </div>
+                        
+                        <!-- Hacker/Downloader -->
+                        <div class="text-center opacity-50">
+                            <i class="fa-solid fa-user-ninja text-5xl text-gray-500 mb-2"></i>
+                            <p class="text-xs text-gray-400">Internet Downloader</p>
+                        </div>
+                    </div>
+                    <p class="text-sm text-gray-400 mt-6 leading-relaxed">
+                        Instead of serving normal video files, our engine shreds videos into tiny encrypted pieces (<span class="text-brand-accent">HLS Streaming</span>). If someone tries to "Save Video As", they download unreadable garbage files, not your lecture.
+                    </p>
+                </div>
+
+                <!-- Visual 2: Watermarking -->
+                <div class="bg-slate-800/50 border border-slate-700 rounded-3xl p-8 relative">
+                    <h3 class="text-2xl font-bold mb-6 flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-green-500/20 text-green-400 flex items-center justify-center"><i class="fa-solid fa-fingerprint"></i></div>
+                        Dynamic Watermarking
+                    </h3>
+                    
+                    <!-- Diagram Player -->
+                    <div class="aspect-video bg-black rounded-xl border border-slate-600 relative overflow-hidden flex items-center justify-center shadow-2xl">
+                        <!-- Play button -->
+                        <i class="fa-regular fa-circle-play text-5xl text-white/30"></i>
+                        
+                        <!-- Moving Watermark Simulation -->
+                        <div class="absolute inset-0 p-4 pointer-events-none">
+                            <div class="text-white/40 font-mono text-sm md:text-xl font-bold rotate-[-15deg] absolute top-1/4 left-1/4 select-none">
+                                User: 9876543210<br>
+                                student@email.com
+                            </div>
+                        </div>
+                        
+                        <!-- Player Controls Mockup -->
+                        <div class="absolute bottom-0 left-0 w-full h-10 bg-gradient-to-t from-black/80 to-transparent flex items-end px-4 pb-2 gap-3">
+                            <div class="w-full h-1 bg-gray-600 rounded-full"><div class="w-1/3 h-full bg-brand-primary rounded-full"></div></div>
+                        </div>
+                    </div>
+                    <p class="text-sm text-gray-400 mt-6 leading-relaxed">
+                        If a student tries to record their screen using a second phone, their <b>mobile number and email</b> dynamically float across the video. You will always know exactly who leaked the content, instantly stopping piracy.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="monetization" class="py-24 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 mb-4">Direct Revenue Flow</h2>
+                <p class="text-lg text-gray-500 max-w-2xl mx-auto">No middle-men holding your funds. Fully automated monetization directly integrated into the apps.</p>
+            </div>
+
+            <!-- Flowchart Container -->
+            <div class="max-w-4xl mx-auto bg-white p-8 md:p-12 rounded-3xl shadow-xl border border-gray-100 relative">
+                
+                <div class="flex flex-col md:flex-row justify-between items-center gap-8 relative z-10">
+                    
+                    <!-- Step 1: Student App -->
+                    <div class="flex flex-col items-center text-center group">
+                        <div class="w-20 h-20 rounded-2xl bg-blue-50 flex items-center justify-center mb-4 transition transform group-hover:-translate-y-2">
+                            <i class="fa-solid fa-cart-shopping text-3xl text-brand-primary"></i>
+                        </div>
+                        <h4 class="font-bold text-gray-900">1. Student Buys</h4>
+                        <p class="text-xs text-gray-500 mt-2 max-w-[150px]">Student clicks "Buy Course" on App or Website.</p>
+                    </div>
+
+                    <!-- Arrow 1 -->
+                    <div class="hidden md:flex flex-col items-center w-32">
+                        <svg class="w-full h-8 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 100 20" preserveAspectRatio="none">
+                            <line x1="0" y1="10" x2="90" y2="10" stroke-width="4" stroke-dasharray="8,8" class="animated-line" />
+                            <polygon points="90,5 100,10 90,15" fill="currentColor" />
+                        </svg>
+                        <span class="text-[10px] font-bold text-gray-400 uppercase mt-1">Encrypted Payment</span>
+                    </div>
+                    <!-- Mobile Arrow -->
+                    <i class="fa-solid fa-chevron-down text-gray-300 text-2xl md:hidden"></i>
+
+                    <!-- Step 2: Gateway -->
+                    <div class="flex flex-col items-center text-center group">
+                        <div class="w-24 h-24 rounded-full bg-white border-4 border-gray-100 shadow-md flex flex-col items-center justify-center mb-4 transition transform group-hover:-translate-y-2">
+                            <i class="fa-solid fa-building-columns text-2xl text-gray-700 mb-1"></i>
+                            <span class="text-[10px] font-bold text-gray-500">Razorpay / Stripe</span>
+                        </div>
+                        <h4 class="font-bold text-gray-900">2. Payment Gateway</h4>
+                        <p class="text-xs text-gray-500 mt-2 max-w-[150px]">Processes UPI, Cards, NetBanking securely.</p>
+                    </div>
+
+                    <!-- Arrow 2 -->
+                    <div class="hidden md:flex flex-col items-center w-32">
+                        <svg class="w-full h-8 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 100 20" preserveAspectRatio="none">
+                            <line x1="0" y1="10" x2="90" y2="10" stroke-width="4" stroke-dasharray="8,8" class="animated-line" />
+                            <polygon points="90,5 100,10 90,15" fill="currentColor" />
+                        </svg>
+                        <span class="text-[10px] font-bold text-green-500 uppercase mt-1">Instant Transfer</span>
+                    </div>
+                    <!-- Mobile Arrow -->
+                    <i class="fa-solid fa-chevron-down text-green-400 text-2xl md:hidden"></i>
+
+                    <!-- Step 3: Client Bank -->
+                    <div class="flex flex-col items-center text-center group">
+                        <div class="w-20 h-20 rounded-2xl bg-green-50 flex items-center justify-center mb-4 transition transform group-hover:-translate-y-2 border border-green-100 shadow-[0_0_20px_rgba(16,185,129,0.2)]">
+                            <i class="fa-solid fa-wallet text-3xl text-green-500"></i>
+                        </div>
+                        <h4 class="font-bold text-gray-900">3. Your Bank Account</h4>
+                        <p class="text-xs text-gray-500 mt-2 max-w-[150px]">Funds auto-settled to EconomicqsMaster account.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-brand-dark pt-20 pb-8 border-t border-white/10 text-center">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="w-20 h-20 bg-brand-primary/20 rounded-full flex items-center justify-center mx-auto mb-6 text-brand-primary text-3xl border border-brand-primary/30">
+                <i class="fa-solid fa-rocket"></i>
+            </div>
+            <h2 class="text-3xl md:text-5xl font-bold text-white mb-6">Ready to launch <span class="text-brand-accent">EconomicqsMaster?</span></h2>
+            <p class="text-gray-400 text-lg mb-12">
+                Let CredibleEduTech handle the code, the servers, and the security, so you can focus on teaching Economics.
+            </p>
+            
+            <div class="bg-white/5 rounded-2xl p-6 md:p-8 flex flex-col md:flex-row items-center justify-between border border-white/10 gap-6 max-w-2xl mx-auto mb-16">
+                <div class="flex items-center gap-4 text-left">
+                    <div class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center text-xl text-white">
+                        <i class="fa-solid fa-envelope-open-text"></i>
+                    </div>
+                    <div>
+                        <p class="text-sm text-gray-400">Approve this proposal</p>
+                        <p class="text-white font-bold text-lg">Contact Us to Begin Development</p>
+                    </div>
+                </div>
+                <a href="mailto:hello@credibleedutech.com" class="bg-brand-primary hover:bg-blue-600 text-white px-8 py-3 rounded-full font-bold transition w-full md:w-auto text-center shadow-lg shadow-blue-500/30">
+                    Start Project
+                </a>
+            </div>
+
+            <div class="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4 text-sm">
+                <div class="flex items-center gap-2">
+                    <div class="w-6 h-6 bg-brand-primary rounded text-white font-bold text-[10px] flex items-center justify-center">CE</div>
+                    <span class="text-white font-semibold">CredibleEduTech</span>
+                </div>
+                <p class="text-gray-500">
+                    &copy; 2026 CredibleEduTech. Prepared exclusively for EconomicqsMaster.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
