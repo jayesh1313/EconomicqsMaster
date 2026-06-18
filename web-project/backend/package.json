@@ -7,7 +7,7 @@
   "scripts": {
     "start": "node src/server.js",
     "dev": "nodemon src/server.js",
-    "test": "jest",
+    "test": "node --test",
     "lint": "eslint src"
   },
   "keywords": [
@@ -22,7 +22,7 @@
     "cors": "^2.8.5",
     "dotenv": "^16.3.1",
     "bcryptjs": "^2.4.3",
-    "jsonwebtoken": "^9.1.2",
+    "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.0.0",
     "validator": "^13.11.0",
     "express-async-errors": "^3.1.1",

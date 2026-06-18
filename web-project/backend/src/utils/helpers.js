@@ -1,6 +1,3 @@
-import fs from 'fs'
-import path from 'path'
-
 // Create a simple logger utility for the backend
 export const logRequest = (method, url, statusCode) => {
   const timestamp = new Date().toISOString()

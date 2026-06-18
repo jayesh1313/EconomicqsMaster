@@ -3,6 +3,8 @@ import cors from 'cors'
 import helmet from 'helmet'
 import morgan from 'morgan'
 import 'express-async-errors'
+import path from 'path'
+import { fileURLToPath } from 'url'
 import config from './config/index.js'
 import { errorHandler, notFound } from './middleware/errorHandler.js'
 import dashboardRoutes from './routes/dashboardRoutes.js'
@@ -44,9 +46,15 @@ app.use(errorHandler)
 
 // Start server
 const PORT = config.port
-app.listen(PORT, () => {
-  console.log(`🚀 Server running on port ${PORT}`)
-  console.log(`📡 Environment: ${config.nodeEnv}`)
-})
+const currentFilePath = fileURLToPath(import.meta.url)
+const executedFilePath = process.argv[1] ? path.resolve(process.argv[1]) : ''
+const shouldStartServer = currentFilePath === executedFilePath
+
+if (shouldStartServer) {
+  app.listen(PORT, () => {
+    console.log(`🚀 Server running on port ${PORT}`)
+    console.log(`📡 Environment: ${config.nodeEnv}`)
+  })
+}
 
 export default app
