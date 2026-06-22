@@ -1,5 +1,6 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:equatable/equatable.dart';
+import 'dart:math' as math;
 
 // Events
 abstract class QuantitativeEvent extends Equatable {
@@ -106,9 +107,10 @@ class QuantitativeBloc extends Bloc<QuantitativeEvent, QuantitativeState> {
     }
 
     // Initialize with sample variance
-    double sigma2 = returns.fold(0, (sum, r) => sum + r * r) / returns.length;
+    double sigma2 =
+      returns.fold<double>(0.0, (sum, r) => sum + r * r) / returns.length;
     List<double> conditionalVariance = [sigma2];
-    List<double> volatility = [sigma2.sqrt()];
+    List<double> volatility = [math.sqrt(sigma2)];
 
     // GARCH(1,1) recursion: σ²_t = ω + α*ε²_{t-1} + β*σ²_{t-1}
     for (int i = 1; i < returns.length; i++) {
@@ -119,7 +121,7 @@ class QuantitativeBloc extends Bloc<QuantitativeEvent, QuantitativeState> {
       sigma2 = sigma2 > 0 ? sigma2 : 1e-6;
       
       conditionalVariance.add(sigma2);
-      volatility.add(sigma2.sqrt());
+      volatility.add(math.sqrt(sigma2));
     }
 
     return {

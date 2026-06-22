@@ -33,6 +33,22 @@ app.use('/api/users', usersRoutes)
 app.use('/api/auth', authRoutes)
 app.use('/api/settings', settingsRoutes)
 
+// Root endpoint
+app.get('/', (req, res) => {
+  res.json({
+    success: true,
+    message: 'Backend API is running',
+    endpoints: [
+      '/health',
+      '/api/dashboard',
+      '/api/analytics',
+      '/api/users',
+      '/api/auth',
+      '/api/settings',
+    ],
+  })
+})
+
 // Health check
 app.get('/health', (req, res) => {
   res.json({ status: 'OK', timestamp: new Date() })

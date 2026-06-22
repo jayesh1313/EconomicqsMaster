@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:supabase_flutter/supabase_flutter.dart';
+import 'package:supabase_flutter/supabase_flutter.dart' hide AuthState;
 import 'package:credible_edutech/core/service_locator.dart';
 import 'package:credible_edutech/shared/theme/app_theme.dart';
 import 'package:credible_edutech/features/auth/presentation/bloc/auth_bloc.dart';

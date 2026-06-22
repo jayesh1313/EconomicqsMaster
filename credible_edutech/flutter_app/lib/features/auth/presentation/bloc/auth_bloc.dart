@@ -2,7 +2,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:equatable/equatable.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 import 'package:device_info_plus/device_info_plus.dart';
-import 'dart:convert';
+import 'package:flutter/foundation.dart' show kIsWeb;
 import 'dart:io' show Platform;
 
 // Events
@@ -93,7 +93,7 @@ class AuthError extends AuthState {
 // BLoC
 class AuthBloc extends Bloc<AuthEvent, AuthState> {
   final SupabaseClient supabaseClient;
-  late String _deviceId;
+  String _deviceId = '';
 
   AuthBloc({required this.supabaseClient}) : super(const AuthInitial()) {
     on<AuthCheckStatusEvent>(_onCheckStatus);
@@ -109,7 +109,10 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
     String id = '';
 
     try {
-      if (Platform.isAndroid) {
+      if (kIsWeb) {
+        final webInfo = await deviceInfo.webBrowserInfo;
+        id = webInfo.userAgent ?? 'web_${DateTime.now().millisecondsSinceEpoch}';
+      } else if (Platform.isAndroid) {
         final androidInfo = await deviceInfo.androidInfo;
         id = androidInfo.id;
       } else if (Platform.isIOS) {
@@ -200,7 +203,7 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
     try {
       final deviceId = await _getDeviceId();
 
-      final response = await supabaseClient.auth.signUpWithPassword(
+      final response = await supabaseClient.auth.signUp(
         email: event.email,
         password: event.password,
       );
